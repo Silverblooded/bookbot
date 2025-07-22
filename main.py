@@ -3,10 +3,8 @@ def count():
         num_words = 0
         file_contents = f.read()
         book = file_contents.split(" ")
-        for i in range(len(book)):
-            num_words = i
+        num_words = len(file_contents.split(" "))
         print(f"{num_words} words found in the document")
-    # print(f"{num_words} words found in the document")
 
 
 count()
