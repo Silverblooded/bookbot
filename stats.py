@@ -7,4 +7,9 @@ def count():
         print(f"{num_words} words found in the document")
 
 
+def characters_sorted():
+    with open("./book/frankenstein.txt") as f:
+        pass
+
+
 count()
