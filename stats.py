@@ -3,7 +3,7 @@ def count():
         num_words = 0
         file_contents = f.read()
         num_words = len(file_contents.split())
-        print(f"{num_words} words found in the document")
+        return num_words
 
 
 def characters_sorted():
@@ -16,8 +16,22 @@ def characters_sorted():
                 letters[letter] += 1
             else:
                 letters[letter] = 1
-        print(letters)
+        return letters
 
 
-count()
-characters_sorted()
+def sort_on(item):
+    return item[1]
+
+
+print(
+    "============ BOOKBOT ============\nAnalyzing book found at books/frankenstein.txt..."
+)
+
+print(f"----------- Word Count ----------\n{count()}")
+letter_counts = characters_sorted()
+sorted_letters = sorted(letter_counts.items(), key=sort_on, reverse=True)
+
+print("--------- Character Count -------")
+for letter, count in sorted_letters:
+    print(f"{letter} | {count}")
+print("============= END ===============")
