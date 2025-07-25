@@ -27,11 +27,11 @@ print(
     "============ BOOKBOT ============\nAnalyzing book found at books/frankenstein.txt..."
 )
 
-print(f"----------- Word Count ----------\n{count()}")
+print(f"----------- Word Count ----------\nFound {count()} total words")
 letter_counts = characters_sorted()
 sorted_letters = sorted(letter_counts.items(), key=sort_on, reverse=True)
 
 print("--------- Character Count -------")
 for letter, count in sorted_letters:
-    print(f"{letter} | {count}")
+    print(f"{letter}: {count}")
 print("============= END ===============")
