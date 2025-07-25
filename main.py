@@ -1,1 +1,1 @@
-from stats import count
+from stats import count, characters_sorted
