@@ -1,3 +1,6 @@
+import sys
+
+
 def count():
     with open("./books/frankenstein.txt") as f:
         num_words = 0
