@@ -1,8 +1,10 @@
 import sys
 
+filename = sys.argv[1]
+
 
 def count():
-    with open("./books/frankenstein.txt") as f:
+    with open(filename) as f:
         num_words = 0
         file_contents = f.read()
         num_words = len(file_contents.split())
@@ -10,7 +12,7 @@ def count():
 
 
 def characters_sorted():
-    with open("./books/frankenstein.txt") as f:
+    with open(filename) as f:
         letters = {}
         file_contents = f.read()
         book = file_contents.lower()
